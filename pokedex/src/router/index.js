@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const routes = [
-  {
+  { // eslint-disable-next-line
     path: '/',
-    name: 'home',
+    name: 'HomeView',
+
     component: HomeView
   },
 
