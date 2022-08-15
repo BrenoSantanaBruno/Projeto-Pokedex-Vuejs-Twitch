@@ -9,10 +9,9 @@
 
           <div class="card-body bg-pokebola bg-normal">
             <div class="pokemon">
-              <transition name="slide">
+              <transition name="flip">
                 <img src="@/assets/imgs/pokemons/001.png" v-if="exibir">
               </transition>
-
 
               <div class="evolucoes">
                 <transition name="fade">
@@ -22,7 +21,6 @@
                   <img src="@/assets/imgs/pokemons/002.png" v-if="exibir">
                 </transition>
               </div>
-
             </div>
           </div>
 
@@ -86,11 +84,10 @@
 </template>
 
 <script>
-// eslint-disable-next-line
 export default {
-  name: 'HomeView',
-  data: ()=>({
-    exibir: false,
+  name: 'Home',
+  data: () => ({
+    exibir: false
   })
 }
 </script>
@@ -103,6 +100,7 @@ body {
 
 <style scoped>
 
+@import '~@/assets/css/animacoes.css';
 
 .pokedex {
   padding: 20px;
@@ -206,16 +204,14 @@ body {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 70px
+  height: 70px;
 }
 
-  .evolucoes img {
-    cursor: pointer;
-    max-width: 100%;
-    max-height: 100%;
-    float: right;
-
-  }
-
+.evolucoes img {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+  float: right;
+}
 
 </style>
