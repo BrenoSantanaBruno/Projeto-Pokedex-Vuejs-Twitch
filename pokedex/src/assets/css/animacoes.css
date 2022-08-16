@@ -61,11 +61,11 @@ transition: all 1s;
 /* flip */
 
 .flip-enter-active{
-    animation: flip 2s;
+    animation: flipCustomizado 2s;
 }
 
 .flip-leave-active{
-    animation: flip 2s reverse;
+    animation: flipCustomizado 2s reverse;
 }
 
 @keyframes flip {
@@ -75,4 +75,82 @@ transition: all 1s;
     to {
         transform: rotateY(0deg);
     }
+}
+
+@keyframes flipCustomizado {
+    0% {
+        transform: rotateY(-80deg);
+    }
+    25% {
+        transform: rotateY(-75deg);
+    }
+    50% {
+        transform: rotateY(-25deg);
+
+    }
+    100% {
+        transform: rotateY(0deg);
+
+    }
+}
+
+/* Animation 1*/
+
+.animacao1-enter-active, .animacao1-leave-active {}
+
+/* Copy this @keyframes block to your CSS*/
+@keyframes animacao1 {
+    0.0%{
+    transform: scale(1) translate(-100px, 0) skew(0deg);
+    }
+    39.9%{
+    transform: scale(1) translate(100px, 0) skew(-5deg);
+    }
+    45.3%{
+    transform: scale(1) translate(100px, -6px) skew(0deg);
+    }
+    5.1%{
+    transform: scale(1) translate(-100px, 0) skew(-12deg);
+    }
+    50.3%{
+    transform: scale(1) translate(100px, 0px) skew(0deg);
+    }
+    55.3%{
+    transform: scale(1) translate(100px, -10px) skew(0deg);
+    }
+    60.3%{
+    transform: scale(1) translate(100px, 0px) skew(5deg);
+    }
+    95.1%{
+    transform: scale(1) translate(-100px, 0) skew(12deg);
+    }
+    99.6%{
+    transform: scale(1) translate(-100px, 0) skew(0deg);
+    }
+}
+
+@keyframes pulo {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-30px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-8px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+
+
+/* matching transition and animation
+.pulo-enter-active{
+}
+
+@keyframes pulo {
+
+}
+ */
+
+/* Add the animation: property to whichever element you want to animate */
+#elementToAnimate{
+    animation: yourAnimation 5s ease 0s infinite normal forwards;
 }
